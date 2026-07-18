@@ -1,21 +1,104 @@
 "use client";
 
-import * as React from "react";
-import { ThemeProvider as NextThemesProvider } from "next-themes";
+import React, { createContext, useContext, useEffect, useState } from "react";
+
+
+type Theme = "light" | "dark";
+
+
+const ThemeContext = createContext<{
+  theme: Theme;
+  toggleTheme: () => void;
+} | null>(null);
+
+
 
 export function ThemeProvider({
   children,
 }: {
   children: React.ReactNode;
 }) {
+
+
+  const [theme, setTheme] = useState<Theme>("light");
+
+
+  useEffect(() => {
+
+    const savedTheme = localStorage.getItem("theme") as Theme | null;
+
+
+    if (savedTheme) {
+
+      setTheme(savedTheme);
+
+      document.documentElement.classList.toggle(
+        "dark",
+        savedTheme === "dark"
+      );
+
+    }
+
+  }, []);
+
+
+
+  const toggleTheme = () => {
+
+    const newTheme = theme === "light" ? "dark" : "light";
+
+
+    setTheme(newTheme);
+
+
+    localStorage.setItem(
+      "theme",
+      newTheme
+    );
+
+
+    document.documentElement.classList.toggle(
+      "dark",
+      newTheme === "dark"
+    );
+
+  };
+
+
+
   return (
-    <NextThemesProvider
-      attribute="class"
-      defaultTheme="system"
-      enableSystem
-      disableTransitionOnChange
+
+    <ThemeContext.Provider
+      value={{
+        theme,
+        toggleTheme,
+      }}
     >
+
       {children}
-    </NextThemesProvider>
+
+    </ThemeContext.Provider>
+
   );
+
+}
+
+
+
+export function useTheme() {
+
+  const context = useContext(ThemeContext);
+
+
+  if (!context) {
+
+    throw new Error(
+      "useTheme must be used inside ThemeProvider"
+    );
+
+  }
+
+
+  return context;
+
 }
