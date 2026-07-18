@@ -1,18 +1,67 @@
 "use client";
 
 import Link from "next/link";
-import { Moon, Sun } from "lucide-react";
-import { useTheme } from "@/components/providers/theme-provider";
-import { useEffect, useState } from "react";
+import {
+  Moon,
+  Sun,
+  Menu,
+  X,
+} from "lucide-react";
+
+import {
+  useTheme
+} from "@/components/providers/theme-provider";
+
+import {
+  useEffect,
+  useState
+} from "react";
+
+
+
+const links = [
+  {
+    name: "About",
+    href: "#about",
+  },
+  {
+    name: "Experience",
+    href: "#experience",
+  },
+  {
+    name: "Projects",
+    href: "#projects",
+  },
+  {
+    name: "Skills",
+    href: "#skills",
+  },
+  {
+  name: "Education",
+  href: "#education",
+  },
+  {
+    name: "Contact",
+    href: "#contact",
+  },
+];
+
 
 
 export default function Navbar() {
 
 
-  const { theme, toggleTheme } = useTheme();
+  const {
+    theme,
+    toggleTheme,
+  } = useTheme();
+
 
 
   const [mounted, setMounted] = useState(false);
+
+  const [open, setOpen] = useState(false);
+
 
 
   useEffect(() => {
@@ -20,6 +69,7 @@ export default function Navbar() {
     setMounted(true);
 
   }, []);
+
 
 
 
@@ -35,6 +85,7 @@ export default function Navbar() {
         backdrop-blur
       "
     >
+
 
       <nav
         className="
@@ -68,39 +119,39 @@ export default function Navbar() {
 
 
 
-        {/* Menu */}
+        {/* Desktop Menu */}
 
         <div
           className="
             hidden
+            items-center
             gap-8
             md:flex
           "
         >
 
-          <Link href="#about">
-            About
-          </Link>
+          {links.map((link) => (
 
+            <Link
 
-          <Link href="#experience">
-            Experience
-          </Link>
+              key={link.name}
 
+              href={link.href}
 
-          <Link href="#projects">
-            Projects
-          </Link>
+              className="
+                text-sm
+                text-muted-foreground
+                transition
+                hover:text-foreground
+              "
 
+            >
 
-          <Link href="#skills">
-            Skills
-          </Link>
+              {link.name}
 
+            </Link>
 
-          <Link href="#contact">
-            Contact
-          </Link>
+          ))}
 
 
         </div>
@@ -110,43 +161,146 @@ export default function Navbar() {
 
 
 
-        {/* Theme Button */}
 
-        <button
+        {/* Actions */}
 
-          onClick={toggleTheme}
-
+        <div
           className="
-            rounded-full
-            border
-            p-2
-            transition
-            hover:bg-muted
+            flex
+            items-center
+            gap-3
           "
-
-          aria-label="Toggle theme"
-
         >
 
-          {mounted && theme === "dark" ? (
 
-            <Sun
-              size={20}
-            />
 
-          ) : (
+          <button
 
-            <Moon
-              size={20}
-            />
+            onClick={toggleTheme}
 
-          )}
+            className="
+              rounded-full
+              border
+              p-2
+              transition
+              hover:bg-muted
+            "
 
-        </button>
+          >
+
+            {mounted && theme === "dark" ? (
+
+              <Sun size={18}/>
+
+            ) : (
+
+              <Moon size={18}/>
+
+            )}
+
+
+          </button>
+
+
+
+
+
+          {/* Mobile Menu Button */}
+
+
+          <button
+
+            onClick={() => setOpen(!open)}
+
+            className="
+              rounded-full
+              border
+              p-2
+              md:hidden
+            "
+
+          >
+
+            {open ? (
+
+              <X size={18}/>
+
+            ) : (
+
+              <Menu size={18}/>
+
+            )}
+
+          </button>
+
+
+        </div>
 
 
 
       </nav>
+
+
+
+
+
+
+      {/* Mobile Menu */}
+
+
+      {open && (
+
+        <div
+          className="
+            border-t
+            px-6
+            py-5
+            md:hidden
+          "
+        >
+
+          <div
+            className="
+              flex
+              flex-col
+              gap-4
+            "
+          >
+
+
+            {links.map((link)=>(
+
+
+              <Link
+
+                key={link.name}
+
+                href={link.href}
+
+                onClick={() => setOpen(false)}
+
+                className="
+                  text-muted-foreground
+                  hover:text-foreground
+                "
+
+              >
+
+                {link.name}
+
+              </Link>
+
+
+            ))}
+
+
+          </div>
+
+
+        </div>
+
+      )}
+
 
 
     </header>
