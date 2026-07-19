@@ -57,14 +57,14 @@ export default function Hero() {
         max-w-7xl
         items-center
         px-6
-        py-20
+        py-16
       ">
 
 
         <div className="
           grid
           w-full
-          gap-16
+          gap-12
           md:grid-cols-2
           md:items-center
         ">
@@ -80,7 +80,7 @@ export default function Hero() {
 
             initial={{
               opacity:0,
-              scale:0.9,
+              scale:0.95,
             }}
 
             animate={{
@@ -110,6 +110,10 @@ export default function Hero() {
               p-8
               shadow-2xl
               backdrop-blur
+              transition-all
+              duration-300
+              hover:border-blue-500/40
+              hover:shadow-[0_25px_50px_rgba(59,130,246,.15)]
             ">
 
 
@@ -197,6 +201,11 @@ export default function Hero() {
                   border
                   bg-background
                   p-4
+                  transition-all
+                  duration-300
+                  hover:-translate-y-1
+                  hover:shadow-md
+                  hover:border-blue-500/40
                 ">
 
                   🌍 Import & Export Strategy
@@ -210,6 +219,11 @@ export default function Hero() {
                   border
                   bg-background
                   p-4
+                  transition-all
+                  duration-300
+                  hover:-translate-y-1
+                  hover:shadow-md
+                  hover:border-blue-500/40
                 ">
 
                   📊 Data Analysis & Visualization
@@ -224,6 +238,11 @@ export default function Hero() {
                   border
                   bg-background
                   p-4
+                  transition-all
+                  duration-300
+                  hover:-translate-y-1
+                  hover:shadow-md
+                  hover:border-blue-500/40
                 ">
 
                   🤖 Data Science & Business Intelligence
@@ -246,8 +265,13 @@ export default function Hero() {
                 gap-3
                 rounded-xl
                 border
-                bg-blue-500/5
+                bg-background
                 p-4
+                transition-all
+                duration-300
+                hover:-translate-y-1
+                hover:shadow-md
+                hover:border-blue-500/40
               ">
 
 
@@ -518,7 +542,10 @@ export default function Hero() {
                 className="
                   bg-blue-600
                   text-white
+                  transition-all
+                  duration-300
                   hover:bg-blue-700
+                  hover:scale-105
                   dark:bg-blue-500
                   dark:hover:bg-blue-600
                 "
@@ -548,13 +575,16 @@ export default function Hero() {
                 variant="outline"
 
                 className="
-                  border-blue-600
-                  text-blue-600
-                  hover:bg-blue-50
-                  dark:border-blue-400
-                  dark:text-blue-400
-                  dark:hover:bg-blue-950
-                "
+                border-blue-600
+                text-blue-600
+                transition-all
+                duration-300
+                hover:bg-blue-50
+                hover:scale-105
+                dark:border-blue-400
+                dark:text-blue-400
+                dark:hover:bg-blue-950
+              "
 
               >
 

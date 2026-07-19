@@ -37,7 +37,7 @@ export default function Education() {
         mx-auto
         max-w-7xl
         px-6
-        py-24
+        py-10
       "
     >
 

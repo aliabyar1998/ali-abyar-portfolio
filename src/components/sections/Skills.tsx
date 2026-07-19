@@ -1,104 +1,97 @@
 "use client";
 
 import { motion } from "framer-motion";
+
 import {
-  Code2,
+  Database,
   BrainCircuit,
+  BarChart3,
   Globe2,
-  Languages,
 } from "lucide-react";
 
-
-const skillGroups = [
-
+const skillCategories = [
   {
-    title: "Data & Technology",
+    icon: Database,
 
-    icon: BrainCircuit,
+    title: "Data Analytics",
 
     skills: [
       "Python",
-      "Data Analysis",
-      "Data Science",
-      "Machine Learning",
-      "Big Data",
+      "Pandas",
+      "NumPy",
+      "SQL",
+      "Excel",
     ],
   },
 
+  {
+    icon: BrainCircuit,
+
+    title: "Machine Learning",
+
+    skills: [
+      "Scikit-Learn",
+      "Random Forest",
+      "Logistic Regression",
+      "Feature Engineering",
+      "Model Evaluation",
+    ],
+  },
 
   {
-    title: "Business & Trade",
+    icon: BarChart3,
 
+    title: "Business Intelligence",
+
+    skills: [
+      "Power BI",
+      "Tableau",
+      "Data Visualization",
+      "Dashboard Design",
+    ],
+  },
+
+  {
     icon: Globe2,
 
-    skills: [
-      "Import",
-      "Export",
-      "International Trade",
-    ],
-  },
-
-
-  {
-    title: "Development & Automation",
-
-    icon: Code2,
+    title: "International Trade",
 
     skills: [
-      "Telegram Bots",
+      "Import & Export",
+      "Market Research",
+      "Trade Analysis",
+      "Business Strategy",
     ],
   },
-
-
-  {
-    title: "Languages",
-
-    icon: Languages,
-
-    skills: [
-      "English",
-      "Persian",
-    ],
-  },
-
 ];
 
-
-
 export default function Skills() {
-
-
-  return (
-
+    return (
     <section
       id="skills"
       className="
         mx-auto
         max-w-7xl
         px-6
-        py-24
+        py-16
       "
     >
-
-
       <motion.div
-
         initial={{
-          opacity:0,
-          y:30,
+          opacity: 0,
+          y: 30,
         }}
-
         whileInView={{
-          opacity:1,
-          y:0,
+          opacity: 1,
+          y: 0,
         }}
-
+        transition={{
+          duration: 0.5,
+        }}
         viewport={{
-          once:true,
+          once: true,
         }}
-
       >
-
         <h2
           className="
             text-3xl
@@ -106,174 +99,122 @@ export default function Skills() {
             md:text-4xl
           "
         >
-          Skills
+          Technical Skills
         </h2>
-
 
         <p
           className="
             mt-5
-            max-w-2xl
+            max-w-3xl
+            text-lg
+            leading-8
             text-muted-foreground
           "
         >
-          A combination of technical expertise,
-          data skills, and international business knowledge.
+          A combination of technical expertise, analytical thinking,
+          and international trade knowledge used to solve real-world
+          business challenges.
         </p>
-
-
       </motion.div>
-
-
-
-
 
       <div
         className="
           mt-12
           grid
-          gap-6
+          gap-8
           md:grid-cols-2
         "
       >
-
-
-        {skillGroups.map((group,index)=>{
-
-
-          const Icon = group.icon;
-
+        {skillCategories.map((category, index) => {
+          const Icon = category.icon;
 
           return (
-
             <motion.div
-
-              key={group.title}
-
+              key={category.title}
               initial={{
-                opacity:0,
-                y:30,
+                opacity: 0,
+                y: 40,
               }}
-
               whileInView={{
-                opacity:1,
-                y:0,
+                opacity: 1,
+                y: 0,
               }}
-
               transition={{
-                delay:index*0.1,
+                duration: 0.5,
+                delay: index * 0.12,
               }}
-
               viewport={{
-                once:true,
+                once: true,
               }}
-
               className="
                 rounded-2xl
                 border
                 bg-card
-                p-6
+                p-8
+                shadow-sm
+                transition-all
+                duration-300
+                hover:-translate-y-2
+                hover:shadow-xl
+                hover:border-blue-500/40
               "
-
             >
+              <div
+                className="
+                  mb-6
+                  inline-flex
+                  rounded-xl
+                  bg-blue-500/10
+                  p-4
+                  text-blue-600
+                  dark:text-blue-400
+                "
+              >
+                <Icon size={28} />
+              </div>
 
+              <h3
+                className="
+                  text-xl
+                  font-bold
+                "
+              >
+                {category.title}
+              </h3>
 
               <div
                 className="
-                  mb-5
+                  mt-6
                   flex
-                  items-center
+                  flex-wrap
                   gap-3
                 "
               >
-
-                <div
-                  className="
-                    rounded-xl
-                    bg-blue-500/10
-                    p-3
-                    text-blue-600
-                    dark:text-blue-400
-                  "
-                >
-
-                  <Icon size={24}/>
-
-                </div>
-
-
-
-                <h3
-                  className="
-                    text-xl
-                    font-semibold
-                  "
-                >
-
-                  {group.title}
-
-                </h3>
-
-
-              </div>
-
-
-
-
-
-              <div
-                className="
-                  flex
-                  flex-wrap
-                  gap-2
-                "
-              >
-
-                {group.skills.map(skill=>(
-
-
+                {category.skills.map((skill) => (
                   <span
-
                     key={skill}
-
                     className="
                       rounded-full
                       border
-                      px-3
-                      py-1
+                      bg-blue-500/5
+                      px-4
+                      py-2
                       text-sm
+                      font-medium
+                      transition-colors
+                      hover:border-blue-500
+                      hover:text-blue-600
+                      dark:hover:text-blue-400
                     "
-
                   >
-
                     {skill}
-
                   </span>
-
-
                 ))}
-
-
               </div>
-
-
-
             </motion.div>
-
-
           );
-
-
         })}
-
-
-
       </div>
-
-
-
     </section>
-
   );
-
 }
