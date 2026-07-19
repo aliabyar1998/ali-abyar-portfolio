@@ -10,27 +10,6 @@ import {
 
 const contactLinks = [
 
-  {
-    title: "Email",
-
-    value: "aliabyar1997@gmail.com",
-
-    href: "mailto:aliabyar1997@gmail.com",
-
-    icon: Mail,
-  },
-
-
-  {
-    title: "Phone",
-
-    value: "+98 913 445 6180",
-
-    href: "tel:+989134456180",
-
-    icon: Phone,
-  },
-
 
   {
     title: "GitHub",
