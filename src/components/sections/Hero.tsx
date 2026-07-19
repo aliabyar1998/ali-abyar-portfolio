@@ -535,62 +535,49 @@ export default function Hero() {
             >
 
 
-              <Button
-
-                size="lg"
-
-                className="
-                  bg-blue-600
-                  text-white
-                  transition-all
-                  duration-300
-                  hover:bg-blue-700
-                  hover:scale-105
-                  dark:bg-blue-500
-                  dark:hover:bg-blue-600
-                "
-
-              >
-
-                Explore Expertise
-
-                <ArrowRight className="
-                  ml-2
-                  h-4
-                  w-4
-                "/>
-
-
-              </Button>
+              <a href="#about">
+                <Button
+                  size="lg"
+                  className="
+                    bg-blue-600
+                    text-white
+                    transition-all
+                    duration-300
+                    hover:bg-blue-700
+                    hover:scale-105
+                    dark:bg-blue-500
+                    dark:hover:bg-blue-600
+                  "
+                >
+                  Explore Expertise
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </a>
 
 
 
 
 
 
-              <Button
-
-                size="lg"
-
-                variant="outline"
-
-                className="
-                border-blue-600
-                text-blue-600
-                transition-all
-                duration-300
-                hover:bg-blue-50
-                hover:scale-105
-                dark:border-blue-400
-                dark:text-blue-400
-                dark:hover:bg-blue-950
-              "
-
-              >
-
-                Contact Me
-
-              </Button>
+              <a href="#contact">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="
+                    border-blue-600
+                    text-blue-600
+                    transition-all
+                    duration-300
+                    hover:bg-blue-50
+                    hover:scale-105
+                    dark:border-blue-400
+                    dark:text-blue-400
+                    dark:hover:bg-blue-950
+                  "
+                >
+                  Contact Me
+                </Button>
+              </a>
 
 
 
