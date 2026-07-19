@@ -135,7 +135,7 @@ export default function Footer() {
         "
       >
 
-        © {new Date().getFullYear()} Ali Abyar. All rights reserved.
+        © {new Date().getFullYear()} Ali Abyar. Designed and developed by Ali Abyar.
 
       </div>
 
