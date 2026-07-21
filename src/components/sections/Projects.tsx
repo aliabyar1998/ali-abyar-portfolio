@@ -9,12 +9,33 @@ import {
 
 const projects = [
   {
+    icon: BrainCircuit,
+
+    title: "Online Retail Sales Forecasting & Business Analytics",
+
+    description:
+      "Built a complete machine learning pipeline to forecast monthly sales using more than 541,000 real UK online retail transactions. The project included data cleaning, time-series feature engineering, model comparison, and business analytics to identify seasonal trends, peak sales periods, and customer purchasing behavior.",
+
+    tags: [
+      "Python",
+      "Machine Learning",
+      "Time Series",
+      "Random Forest",
+      "Gradient Boosting",
+      "Business Analytics",
+    ],
+
+    github:
+      "https://github.com/aliabyar1998/Online-Retail",
+  },
+
+  {
     icon: Database,
 
     title: "E-Commerce Data Analysis",
 
     description:
-      "A complete data analytics project focused on cleaning, transforming, and analyzing e-commerce sales data. The project includes Exploratory Data Analysis (EDA), customer segmentation using RFM analysis, and Market Basket Analysis with the Apriori algorithm to identify purchasing patterns and generate actionable business insights.",
+      "Performed end-to-end data analysis on e-commerce sales data, including data cleaning, exploratory data analysis (EDA), RFM customer segmentation, and Market Basket Analysis using the Apriori algorithm to generate actionable business insights.",
 
     tags: [
       "Python",
@@ -34,7 +55,7 @@ const projects = [
     title: "Airline Passenger Satisfaction Prediction",
 
     description:
-      "A machine learning project built on more than 129,000 passenger records. The workflow includes preprocessing, feature engineering, feature selection, model comparison, and business interpretation. Random Forest achieved over 96% prediction accuracy while identifying the most influential factors affecting passenger satisfaction.",
+      "Developed a machine learning model using more than 129,000 airline passenger records. The project covered preprocessing, feature engineering, feature selection, model comparison, and business interpretation, achieving over 96% accuracy with Random Forest.",
 
     tags: [
       "Python",
