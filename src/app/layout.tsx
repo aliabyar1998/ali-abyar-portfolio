@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ali-abyar-portfolio.vercel.app"),
+  metadataBase: new URL("https://aliabyar.ir"),
 
   title: "Ali Abyar | Data Analyst & Data Scientist",
 
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "Ali Abyar",
-      url: "https://ali-abyar-portfolio.vercel.app",
+      url: "https://aliabyar.ir",
     },
   ],
 
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: "https://ali-abyar-portfolio.vercel.app",
+    canonical: "https://aliabyar.ir",
   },
 
   openGraph: {
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     description:
       "Portfolio showcasing Data Analytics, Machine Learning, Business Intelligence, and International Trade projects.",
 
-    url: "https://ali-abyar-portfolio.vercel.app",
+    url: "https://aliabyar.ir",
 
     siteName: "Ali Abyar Portfolio",
 
