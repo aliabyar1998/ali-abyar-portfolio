@@ -348,8 +348,7 @@ export default function Hero() {
                 font-medium
                 uppercase
                 tracking-widest
-                text-blue-600
-                dark:text-blue-400
+                text-[#60A5FA]
               "
 
             >
@@ -424,53 +423,50 @@ export default function Hero() {
 
 
 
-            <motion.h1
-
+            <motion.div
               initial={{
-                opacity:0,
-                y:30,
+                opacity: 0,
+                y: 30,
               }}
-
               animate={{
-                opacity:1,
-                y:0,
+                opacity: 1,
+                y: 0,
               }}
-
               transition={{
-                delay:0.1,
+                delay: 0.1,
               }}
-
-              className="
-                text-4xl
-                font-bold
-                leading-tight
-                md:text-6xl
-              "
-
             >
 
-              Hi, I'm{" "}
+              <h1
+                className="
+                  text-4xl
+                  font-bold
+                  leading-tight
+                  md:text-6xl
+                "
+              >
+                Hi, I'm{" "}
+                <span className="text-[#60A5FA]">
+                  {portfolio.name}
+                </span>
+              </h1>
 
+              <h2
+                className="
+                  mt-6
+                  text-2xl
+                  font-semibold
+                  leading-snug
+                  text-foreground
+                  md:text-4xl
+                "
+              >
+                Turning Trade Data
+                <br />
+                Into Smart Decisions
+              </h2>
 
-              <span className="text-primary">
-
-                {portfolio.name}
-
-              </span>
-
-
-
-              <br />
-
-
-              Turning Trade Data
-
-              <br />
-
-              Into Smart Decisions
-
-
-            </motion.h1>
+            </motion.div>
 
 
 
@@ -539,14 +535,12 @@ export default function Hero() {
                 <Button
                   size="lg"
                   className="
-                    bg-blue-600
+                    bg-[#60A5FA]
                     text-white
                     transition-all
                     duration-300
-                    hover:bg-blue-700
+                    hover:bg-[#3B82F6]
                     hover:scale-105
-                    dark:bg-blue-500
-                    dark:hover:bg-blue-600
                   "
                 >
                   Explore Expertise
@@ -554,25 +548,20 @@ export default function Hero() {
                 </Button>
               </a>
 
-
-
-
-
-
               <a href="#contact">
                 <Button
                   size="lg"
                   variant="outline"
                   className="
-                    border-blue-600
-                    text-blue-600
+                    border-[#60A5FA]
+                    text-[#60A5FA]
                     transition-all
                     duration-300
-                    hover:bg-blue-50
+                    hover:bg-[#EFF6FF]
                     hover:scale-105
-                    dark:border-blue-400
-                    dark:text-blue-400
-                    dark:hover:bg-blue-950
+                    dark:border-[#93C5FD]
+                    dark:text-[#93C5FD]
+                    dark:hover:bg-[#1E3A8A]/20
                   "
                 >
                   Contact Me

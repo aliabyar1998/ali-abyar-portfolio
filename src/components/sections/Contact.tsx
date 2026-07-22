@@ -137,8 +137,8 @@ export default function Contact() {
                   justify-center
                   rounded-xl
                   bg-blue-500/10
-                  text-blue-600
-                  dark:text-blue-400
+                  text-orange-500
+                  dark:text-orange-400
                 "
               >
                 <Icon size={28} />
@@ -169,16 +169,16 @@ export default function Contact() {
                   inline-flex
                   items-center
                   rounded-lg
-                  bg-blue-600
+                  bg-[#60A5FA]
                   px-4
                   py-2
                   text-sm
                   font-medium
                   text-white
-                  transition-colors
-                  hover:bg-blue-700
-                  dark:bg-blue-500
-                  dark:hover:bg-blue-600
+                  transition-all
+                  duration-300
+                  hover:bg-[#3B82F6]
+                  hover:scale-105
                 "
               >
                 {item.label}

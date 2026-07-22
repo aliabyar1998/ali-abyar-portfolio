@@ -174,8 +174,8 @@ export default function Projects() {
                   w-fit
                   rounded-xl
                   bg-blue-500/10
-                  p-4
-                  text-blue-600
+                  text-orange-500
+                  dark:text-orange-400
                   dark:text-blue-400
                 "
               >
@@ -221,7 +221,7 @@ export default function Projects() {
                       px-3
                       py-1.5
                       text-xs
-                      font-medium
+                      font-mono
                       transition-colors
                       hover:border-blue-500
                       hover:text-blue-600
@@ -243,17 +243,17 @@ export default function Projects() {
       items-center
       gap-2
       rounded-xl
-      bg-blue-600
+      bg-[#60A5FA]
       px-4
       py-2
       text-sm
       font-medium
       text-white
       transition-all
-      hover:bg-blue-700
+      hover:bg-[#3B82F6]
       hover:scale-105
-      dark:bg-blue-500
-      dark:hover:bg-blue-600
+      dark:bg-[#60A5FA]
+      dark:hover:bg-[#3B82F6]
     "
   >
     <ExternalLink size={18} />

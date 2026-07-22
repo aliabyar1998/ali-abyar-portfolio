@@ -136,8 +136,8 @@ export default function Experience() {
                   justify-center
                   rounded-xl
                   bg-blue-500/10
-                  text-blue-600
-                  dark:text-blue-400
+                  text-orange-500
+                  dark:text-orange-400
                 "
               >
                 <Icon size={24} />

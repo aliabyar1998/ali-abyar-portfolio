@@ -92,13 +92,13 @@ export default function BackToTop() {
             items-center
             justify-center
             rounded-full
-            bg-blue-600
+            bg-[#60A5FA]
             text-white
             shadow-lg
-            transition
-            hover:bg-blue-700
-            dark:bg-blue-500
-            dark:hover:bg-blue-600
+            transition-all
+            duration-300
+            hover:bg-[#3B82F6]
+            hover:scale-110
           "
 
           aria-label="Back to top"

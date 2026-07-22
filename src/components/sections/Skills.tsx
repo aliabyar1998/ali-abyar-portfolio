@@ -166,8 +166,8 @@ export default function Skills() {
                   rounded-xl
                   bg-blue-500/10
                   p-4
-                  text-blue-600
-                  dark:text-blue-400
+                  text-orange-500
+                  dark:text-orange-400
                 "
               >
                 <Icon size={28} />
