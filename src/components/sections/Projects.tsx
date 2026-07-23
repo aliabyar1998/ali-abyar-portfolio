@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import {
   Database,
   BrainCircuit,
@@ -9,8 +10,8 @@ import {
 
 const projects = [
   {
+    image: "/projects/project-online-retail-v1.png",
     icon: BrainCircuit,
-
     title: "Online Retail Sales Forecasting & Business Analytics",
 
     description:
@@ -30,6 +31,7 @@ const projects = [
   },
 
   {
+    image: "/projects/project-ecommerce-v1.png",
     icon: Database,
 
     title: "E-Commerce Data Analysis",
@@ -50,6 +52,7 @@ const projects = [
   },
 
   {
+    image: "/projects/project-airline-v1.png",
     icon: BrainCircuit,
 
     title: "Airline Passenger Satisfaction Prediction",
@@ -132,7 +135,6 @@ export default function Projects() {
       >
         {projects.map((project, index) => {
           const Icon = project.icon;
-
           return (
             <motion.div
               key={project.title}
@@ -191,7 +193,17 @@ export default function Projects() {
               >
                 {project.title}
               </h3>
-
+              {project.image && (
+                <div className="mt-6 overflow-hidden rounded-xl border">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    width={900}
+                    height={500}
+                    className="w-full object-cover"
+                  />
+                </div>
+              )}
               <p
                 className="
                   mt-5
